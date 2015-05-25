@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        /*ie的if条件hake(ie的条件处理)
+        （1）ie10及以上不支持
+        （2）条件注释是ie浏览器专属，
+             其他浏览器会将它们看做普通注释而完全忽略
+        （3）多条件属性并存时，
+             但如果对相同浏览器设置，采用“最近优先”原则
+          （4）语法：<!--[if ie]>...<![endif]-->
+
+           (5)
+           gte:greater than or equal to 大于或等于
+           gt:greater than 大于
+           lte:less than or equal to 小于或等于
+           lt:less than小于
+           if ie 7 等于
+        */
+
+
+        /*.d1{*/
+            /*color: red;*/
+        /*}*/
+
+
+        </style>
+    <!--[if gte ie 7]>
+    <!--<style>-->
+        <!--.d1{-->
+            <!--color: greenyellow;-->
+        <!--}-->
+    <!--</style>-->
+    <!--<![endif]-->-->
+<!---->
+    <!--
+    if gte ie 7
+    if lte ie 7
+    if lt ie 7
+    if gt ie 7
+    if (gte ie 6)&(lt ie7)
+    if ie 7
+    if (ie 7)/(ie 7)
+    gt  >
+    gte >=
+    lt  <
+    lte =<
+    -->
+
+
+    <style>
+    <!--
+    /*7.ie6双倍距问题（margin加倍问题）
+    解决：（1）_display:inline
+           (2)margin:40px
+            _margin-left:20px
+           (3)margin:40px!important
+             margin-left:20px
+
+      8.<a href="">链接</a>
+        a:hover{
+            color: green;
+        }
+        超链接中的href=""不可省略，如省略，ie6 ie7伪类会失效
+
+      9.全角空格会占位
+      10.如何处理ie6不支持min-height\max-height
+         ie6：当内容大于高度时，高度会被自动撑开，即使设置了高度
+         解决：（1）min-height：100px
+                   height：100px
+         作业：(2)_height:expression(.....)自己查
+      11.ie6 7与其他浏览器对letter-spacing兼容性问题
+          其他浏览器：你 好 ：谢谢
+          ie6、7：你 好：谢谢
+          解决：根据情况处理，一般用margin-right方法或将最后一个字符提出
+    */
+    -->
+        /*.d1 .d2{*/
+            /**/
+        /*}*/
+        /*.d1{*/
+            /*background-color: red;*/
+            /*width: 200px;*/
+            /*height: 100px;*/
+            /*min-height:200px ;*/
+            /*max-height:200px ;*/
+            /*height: auto!important;*/
+            /*min-height: 150px;*/
+            /*_height: 150px;*/
+        /*}*/
+        /*.d2{*/
+            /*background-color: greenyellow;*/
+            /*float: left;*/
+            /*width: 200px;*/
+            /*height: 200px;*/
+        /*}*/
+        /*a:hover{*/
+            /*color: green;*/
+        /*}*/
+    </style>
+</head>
+<body>
+<!--<div class="d1">概况半兽人更健康报烧热放改变未-->
+  <!--</div>-->
+<!--<div class="d2"></div>-->
+<!--<a href="">链接</a>-->
+<p><span style="">
+</body>
+</html>

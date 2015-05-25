@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!--流布局（伸缩盒（新））-->
+    <!--display: flex;开启流布局
+    flex-grow: 设置盒子的扩展比率;
+                默认值为0，即表示不分配剩余空间。
+                当盒子中包含多个flex-grow属性时，会将这些属性值相加，在根据各自的
+                比重，分配盒子的“剩余”空间。
+    flex-shrink: 设置盒子的收缩比例;
+               默认值为0，即表示不分配剩余空间。
+                当盒子中包含多个flex-shrink:属性时，会将这些属性值相加，在根据各自的
+                比重，减去盒子的设定空间。
+    flex-basis:盒子的伸缩基准值，如基准值之和大于父元素，剩余空间会根据基准值的比值进行剩余空间的收缩分配
+
+    flex：[flex-grow][flex-shrink] [flex-basis]简写
+
+  flex-direction:column-reverse;设置子元素的排列方式;
+           row:默认，从左向右排列
+            row-reverse;从右到左
+            column;纵向排列
+            column-reverse;反转纵向排列
+
+   flex-wrap：超出父元素是否换行
+         nowrap:不换行
+         wrap：超出自动换行
+         wrap-reverse:换行后反转
+    order:这只子元素出现的顺序
+           可以为正数、0、负数
+           按数值大小排列，数小在前
+    align-items:子元素垂直对齐方式
+          flex-start;上对齐（默认）
+          flex-end; 下对齐
+          center; 居中
+          stretch拉伸（
+    justify-content:子元素水平方式对齐
+           flex-start;左对齐（默认）
+          flex-end; 右对齐
+          center; 居中
+          space-around：子元素平均分配剩余空间
+          space-between：子元素平均分配剩余空间，但第一个元素之前和最后一个元素之后不分配
+
+    -->
+    <style>
+        .d0{
+            /*display: flex;*//*开启流布局*/
+            /*display: -webkit-flex;*/
+          width:900px;
+            height: 1800px;
+            border:1px solid #000000;
+            /*align-items:stretch;*/
+
+            /*flex-end;flex-start; center; stretch*/
+            /*flex-direction:column-reverse;*/
+            /*row-reverse;*/
+            /*row*/
+            /*column;*/
+            /*column-reverse;*/
+
+        }
+        .d1,.d2,.d3{
+            width: 100px;
+            height: 400px;
+        }
+        .d1{
+              /*width: 200px;*/
+              /*height: 200px;*/
+              background: #ff0000;
+            /*flex-grow: 1;*/
+            /*-webkit-flex-grow: 1;*/
+            /*-webkit-flex-shrink: 1;*/
+            /*-webkit-flex:1 1 ;*/
+            /*flex-basis: 100px;*/
+            /*-webkit-flex:1 0 100px ;*/
+            /*-webkit-flex:1 1 200px ;*/
+            /*-webkit-flex:1 1 300px ;*/
+
+          }
+        .d2{
+            /*width: 200px;*/
+            /*height: 200px;*/
+            background: #38ff35;
+            /*flex-grow: 2;*/
+            /*-webkit-flex-grow: 2;*/
+            /*-webkit-flex-shrink: 2;*/
+            /*-webkit-flex:2 2;*/
+            /*flex-basis: 200px;*/
+            /*-webkit-flex:2 0 100px ;*/
+            /*-webkit-flex:1 2 200px ;*/
+            /*-webkit-flex:1 3 400px ;*/
+
+        }
+        .d3{
+            /*width: 200px;*/
+            /*height: 200px;*/
+            background: #7661ff;
+             /*flex-grow: 3;*/
+            /*-webkit-flex-grow: 3;*/
+            /*-webkit-flex-shrink: 3;*/
+            /*-webkit-flex:3 3;*/
+            /*flex-basis: 300px;*/
+            /*-webkit-flex:3 0 100px ;*/
+            /*-webkit-flex:1 3 200px ;*/
+            /*-webkit-flex:1 3 500px ;*/
+
+        }
+        </style>
+</head>
+<body>
+<div class="d0">
+    <div class="d1"></div>
+    <div class="d2"></div>
+    <div class="d3"></div>
+    </div>
+</body>
+</html>

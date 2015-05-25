@@ -1,0 +1,95 @@
+<!--<!DOCTYPE 框架练习>-->
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!--
+     一.
+     标准模式（严格模式）strictmode：浏览器按W3C标准解析执行代码
+     怪异模式（兼容模式quirksmode）：使用浏览器自己的方式解析执行代码，由于
+                                   不同浏览器解析执行的方式不一样，所以称怪异模式
+    二.如何区分？
+        标准模式定义：DTD定义（1）<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional //EN http://www.w3.org/TR/html4/loose.dtd">
+                    （2）<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN http://www.w3.org/TR/html4/strict.dtd">
+                    （3）<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN http://www.w3.org/TR/html4/frameset.dtd">
+        怪异模式定义：忽略DTD的定义，即网页中省略上面的声明
+   三.如何测试当前浏览器的执行方式？
+           alert(window.top.document.compatMode);/*输出当前模式*/
+             csscapmat标准模式
+             backcapmt怪异模式
+
+    四.标准模式和怪异模式下盒模型的区别？
+        标准模式：实际宽度=width+border+padding
+        怪异模式：实际宽度=width
+        注：ie6/7/8/9 在怪异模式是以此方式显示
+           其他高级浏览器在怪异模式下1依然以标准模式显示！！！
+     -->
+    <script>
+//        alert(window.top.document.compatMode);/*输出当前模式*/
+         //csscapmat标准模式
+        // backcapmt怪异模式
+    </script>
+    <style>
+        /*边框border*/
+        /*在标准模式下，border会在元素基础上向外扩充*/
+        /*怪异模式下，ie6/7/8/9 border不会扩原数据*/
+        .d1{
+            width: 300px;
+            height: 200px;
+            background-color: #58f444;
+            /*border-left-width: 5px;*//*边框宽度*/
+           /*border-left-style: dashed ;*//*左边框样式 dotted点 dashed虚线 double双线*/
+            /*border-left-color:red ;*/
+            /*border-left:5px dashed red;*//*左边距简写*/
+            /*border-top:3px solid red ;*/
+            /*border: 20px solid red;*/
+
+            /*内边距
+            1.padding无负值
+            2.在标准模式下，padding会在元素基础上向外扩充
+              怪异模式下，ie6/7/8/9 padding不会扩原数据
+            */
+            /*padding: 80px;上下左右*/
+            /*padding:20px 40px;上下 左右*/
+            /*padding:10px 20px 40px;*//*s上 左右 下  */
+            /*padding:10px 20px 40px 50px;上 右 下 左*/
+            /*padding:40px;*/
+
+
+            /*外边距：
+            1.垂直margin，上下合并取最大值
+            2.水平marin，累加
+            3.marign有负值
+            4./*margin: 80px;上下左右*/
+            /*margin:20px 40px;上下  左右*/
+            /*margin:10px 20px 40px;*//*上  左右  下 */
+            /*margin:10px 20px 40px 50px;上 右 下 左*/
+            /*:40px;*/
+
+
+
+        }
+        .d2{
+            width:100px;
+            height: 50px;
+            background-color: blue;
+            /*margin-bottom: -10px;*/
+        }
+        .d3{
+            width:100px;
+            height: 100px;
+            background-color: #ff1733;
+            padding: -20px;
+        }
+    </style>
+</head>
+<body>
+<div class="d1">
+    <div class="d2">
+    </div>
+    <div class="d3">
+    </div>
+</div>
+
+</body>
+</html>

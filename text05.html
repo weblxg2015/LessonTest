@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+
+        /*
+        浮动：
+        1默认为标准流排列
+        2.浮动的元素脱离"标准流"
+        3.浮动以标准流所在位置为起始点，如前面有浮动元素
+        4.浮动属性：float：left/right
+                    clear:left/right/both
+        5.同高度的元素，横向排满后，其他元素会被“挤”到下面
+        6.不同高度的元素横向排满后，挤下的元素会被其他元素“卡”住
+        */
+        .d1{
+            width: 200px;
+            height: 100px;
+            background-color:red;
+            float: left;
+        }
+        .d2{
+            width: 200px;
+            height: 100px;
+            background-color: #b9ffe2;
+            /*float: left;*/
+            /*clear: both;*/
+
+        }
+        .d3{
+            width: 200px;
+            height: 100px;
+            background-color: #72ff48;
+        }
+        .d4{
+            width: 200px;
+            height: 100px;
+            background-color: #ffe820;
+        }
+        .d5{
+            width: 200px;
+            height: 100px;
+            background-color: #ff23dd;
+        }
+        .d6{
+            width: 200px;
+            height: 100px;
+            background-color: blueviolet;
+        }
+
+        /*
+        块级元素block；于同级元素垂直排列，且左右充满，如：div,p
+        行级元素inline；与同级元素横向排列，且内容自适应，不会左右撑满，如：span,a
+        标准流：css规定的默认的块级元素与行级元素的排列方式
+        块级元素与行级元素转换：块级元素
+         display: inline;转换为行级
+         display:block;转换我块级元素
+        */
+        /*作业1:display: inline-block 该属性的特点和用法，举例说明*/
+
+        /*.d_n{*/
+            /*border: 1px solid red;*/
+            /*display: inline;*/
+            /*display:block;*/
+        /*}*/
+            </style>
+</head>
+<body>
+<!--<div class="d_n">hello111</div>-->
+<!--<div class="d_n">hello222</div>-->
+
+<div class="d1"></div>
+<div class="d2"></div>
+<div class="d3"></div>
+<div class="d4"></div>
+<div class="d5"></div>
+<div class="d6"></div>
+</body>
+</html>

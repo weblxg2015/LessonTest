@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!--css3选择器
+    E~F:匹配任何元素之后的同级F元素（包括子元素）
+    -->
+    <style>
+       /*.d0:hover~.d1{*/
+            /*color: red;*/
+        /*}*/
+
+       /*.d0:hover~div{*/
+           /*color: red;*/
+       /*}*/
+
+        /*div[class^="d"]{*/
+       /*color: red;*/
+       /*}*/
+
+       /*div[class$="1"]{*/
+       /*color: red;*/
+       /*}*/
+
+       /*div[class*="9"]{*/
+       /*color: red;*/
+       /*}*/
+       div{
+           color: green;
+       }
+       p{
+           color: blue;
+       }
+       /*参数：odd even 2n 2n+1 3n 3n+1 */
+
+       /*
+       E:nth-child():选择所有在其父元素中的匹配E元素
+                    （所有元素一起排序）
+       1.索引值从1开始
+       2.参数：可以是数字1、2、3
+                关键字 odd 奇数  even 偶数
+                公式 2n
+                     2n+1
+                     3n
+                     3n+1
+                     3n+2
+                     ....
+                     （n从0开始）
+
+        E:nth-of-type():选择父元素中第n个位置，且匹配E的子元素
+                       （所有匹配E的子元素被分离出来单独排序，非E元素不参与
+                       参数同上
+                       ）
+        E:nth-last-child()选择父元素中倒数第n个位置的匹配E元素
+
+         E:nth-of-type():选择父元素中倒数第n个位置，且匹配E的子元素
+                       （所有匹配E的子元素被分离出来单独排序，非E元素不参与
+                       参数同上
+                       ）
+          E:last-child：选择位于其父元素中最后一个位置，且匹配E的子元素
+         E:last-of-type：选择其父元素中匹配E的最后一个同类型的子元素
+        E:first-of-type：选择其父元素中匹配E的第一个同类型的子元素
+        E:only-child 选择其父元素只包含一个子元素，且匹配E
+        E:only-of-type 选择其父元素中只包含一个同类的子元素，且该子元素匹配E
+        E:empty 选择匹配E元素，且该元素不包含任何子节点，注意：文本也算子节点
+        E：not（s）：匹配不含有s选择符的元素E
+          E：root  ：根节点html
+
+
+       .d4 div:only-of-type{
+           color: red;
+       }
+       /*.d4 div:root{*/
+           /*color: red;*/
+       /*}*/
+       /*.d4 div:empty{*/
+           /*color: red;*/
+       /*}*/
+       /*}*/
+       /*.d4 div:nth-last-child(9){*/
+           /*color: red;*/
+       /*}*/
+        /*.d4 div:nth-last-of-type(10){*/
+            /*color: red;*/
+        /*}*/
+
+    </style>
+
+</head>
+<body>
+
+<div class="d4">
+    <div>hello2222</div>
+    <!--<p>hello1111</p>-->
+    <!--<p>hello1111</p>-->
+    <!--<p>hello1111</p>-->
+    <div>hello3333</div>
+    <div>hello4444</div>
+    <div>hello3333</div>
+    <div>hello4444</div>
+    <div>hello3333</div>
+    <div>hello4444</div>
+    <div>hello4444</div>
+    <div>hello3333</div>
+    <div>hello4444</div>
+</div>
+<br>
+
+</body>
+</html>

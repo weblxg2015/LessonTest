@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .table01 tr td{
+             border:1px solid red;/*设置边框*/
+         }
+        .table01{
+            width: 500px;
+            height: 400px;
+        }
+        /*伪类：hover 鼠标悬停*/
+        .table01 tr:hover{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<!--表格
+1设置单元格间距：cellspacing="0"
+2.列合并：rowspan=“2” 将多余列删除
+3.行合并：colspan=“2” 将多余行删除
+-->
+<table class="table01" cellspacing="0" ><!--表格-->
+    <tr><!--行-->
+        <td>a1</td><!--列-->
+        <td>a2</td>
+        <td>a3</td>
+    </tr>
+    <tr>
+        <td>b3</td>
+        <td>b2</td>
+        <td>b3</td>
+    </tr>
+    <tr>
+        <td >c1</td>
+        <td>c2</td>
+        <td>c3</td>
+    </tr>
+    <tr>
+        <td>d1</td>
+        <td>d2</td>
+        <td>d3</td>
+    </tr>
+    </table>
+</body>
+</html>

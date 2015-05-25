@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!--css Hack(黑客)  （css兼容性）
+    1.什么是CSS Hack？
+        由于不同浏览器对CSS的解析结果不同，因此会导致相同的CSS，不同浏览器显示结果不同
+        此时有解决浏览器兼容性问题，即针对不同浏览器写出不同的CSS代码，该过程称为css Hake
+    2.css Hack原理
+       就是利用书写顺序和不同浏览器对一些特定书写方式的解析方式不同而达到不同的效果
+       即兼容性和顺序
+    3.
+      _号（ 例：_height：200px；）：ie6
+       *号（ 例：_height：200px；）：ie6 ie7
+       ！important（例： height：220px！important）：ie7以上，及其他高版本浏览器支持
+       color: red\9;    ie8 8 10 11
+        color: red\0;    ie6-10(包括10)
+        *+color: red;    ？？？仅支持ie7？？？(测IE6有效)
+         >color: red;    ？？？支持ie7？？？
+    -->
+
+    <style>
+        .d1,.d2{
+            width: 200px;
+            height: 100px;
+        }
+        .d1{
+        background-color: #fff472;
+            margin-top: ;
+        }
+
+        /*.d1{*/
+            /*background-color: #fff472;*/
+            /*float: left;*/
+           /*color: red\9;*/
+            /*color: red\0;*/
+            /**color: red;*/
+            /**+color: red;*/
+        /*}*/
+        /*.d2{*/
+            /*background-color: greenyellow;*/
+            /*float: left;*/
+        /*}*/
+
+        /*1.图片超链接有边框（ie10以下）
+        border:none;或border：0；
+
+        2.各个浏览器对默认的内外边距不一致（主要ie6/7）
+        解决:margin:0 padding:0}
+        3. ie6\7 浮动问题
+              解决：clear：both；
+        4.怎么ie6下解决浮动3px bug
+           （1）magin-right：-3px；
+           （2）另一个div左浮动
+       5.ie6默认文本光标高度
+       （1）_line-height:0px
+       (2)_overflow:hidden:
+       //height没有设置
+       (3)*line-height:0px（ie6和7）
+
+       6.IE6不支持png格式图片
+       （1）将图片转存为gif
+       （2） _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=crop,src='atest.png');
+
+      7.ie6图片透明度兼容问题
+background-color: red;
+background-image: url("atest.png");
+_background-image:none;
+_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=crop,src='atest.png');
+
+8.不同内核浏览器颜色不同
+  .d1{
+    width: 300px;
+    height: 300px;
+    background-color: red;
+}
+@media all and (-webkit-min-device-pixel-ratio: 0) {
+    .d1{
+        background-color: #2f6bff;
+    }
+}
+
+@-moz-document url-prefix(){
+    .d1{
+        background-color: #1aff0d;
+    }
+}
+
+
+作业：
+1.内联框架的同城通信（利用JS实现--附加）
+2.haslayout的原理与应用
+3.BFC
+        */
+         a img{
+           border: 0;
+        }
+
+        </style>
+</head>
+<body>
+<!--<a href="" class="a1"><img src="aa.jpg"></a>-->
+   <!--<div class="d1">vgdfgvsdg</div>-->
+   <!--<div class="d2"></div>-->
+<div class="d1"></div>
+</body>
+</html>

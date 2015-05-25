@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        /*
+        相对定位
+         1.position: relative;
+            参数：left right bottom top
+          2.相对定位可以有负值
+          3.相对定位的元素会相对于它原来的位置偏移
+          4.相对定位不脱离标准流
+          5.相对定位不会对父元素和兄弟元素造成影响
+          6.相对定位对浮动元素一样适用
+        */
+        /*
+        绝对定位
+        1.position:absolute
+            参数：left right bottom top
+        2.绝对定位可以有负值
+        3.绝对定位会脱离标准流
+        4.绝对定位的元素，以它的“最近”的一个“已经定位”的“祖先”元素为基准进行定位
+        5.如果没有定位的祖先元素，则会以“浏览器”窗口为基准进行偏移
+        6.如果只设置了绝对定位而没有指定偏移量，则元素仍保留在原位置，但是脱离了标准流
+        */
+
+        /*固定定位
+        position ：fired
+        1.固定定位脱离标准流
+        2.固定定位以浏览器窗口为基准进行偏移
+        3.ie6不支持
+        */
+
+        .d1,.d2,.d3{
+            width: 200px;
+            height: 100px;
+        }
+        .d1{
+            background-color: red;
+            position: relative;
+            /*left: -50px;*/
+            /*right: 50px;*/
+            /*bottom: 50px;*/
+        }
+        .d2{
+            background-color: blue;
+        }
+        .d3{
+            background-color: #4fff2c;
+        }
+
+
+        </style>
+</head>
+
+<body>
+<div class="d1"></div>
+<div class="d2"></div>
+<div class="d3"></div>
+</body>
+
+</html>

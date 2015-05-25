@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!--.选择器优先级
+    1.！important 优先级最高（ie7以上）
+    2.行内优先级要高于外联和内联式
+    如只用内联或外联，优先级与他们的顺序有关，后面的会覆盖前面的，
+    采用“最近优先”原则
+    3.行内>id>class>标签
+    4.class=“d1 d2 d3” class中有多个属性时，与在css中设置的顺序有关
+    在标签中的class顺序无关
+
+    二.css权重
+                   a(行内)       b（ID）      c（类，伪类，属性）      d（标签）
+    只有行内       1               0               0                     0
+    标签          0                0               0                     1
+    a img         0                0               0                     2
+
+    -->
+
+
+    <style>
+        .d1{
+            color:red !important;
+        }
+        </style>
+</head>
+<body>
+
+</body>
+</html>

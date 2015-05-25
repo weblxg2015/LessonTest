@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!--css3 弹性盒子模型（伸缩盒（旧））
+        dispaly:box;开启盒子模型
+        box-orient:定义盒子的布局取向（排列方式）
+                 horizontal：盒子从左到右水平排列
+                 vertical:盒子（子元素）从上到下纵向排列
+
+    box-direction:盒子的布局排列顺序
+        normal：默认的正常排列
+        reverse：反转排列（反向布局）
+
+    box-ordinal-group:定义盒子的显示顺序;
+        用1开始用来设置子元素的位置序号，子元素的分布讲根据这个序号
+        由小到大进行排列
+        如没有指定该属性的子元素，它们的默认序号为1
+        如有相同的序号，它们将按照文档中加载的顺序进行排列
+    box-flex:设置盒子如何分配剩余空间（弹性空间，自适应设计）
+           1.属性值可以是整数或小数
+           2.当盒子中包含多个改善属性时，会将这些属性值相加，在根据各自的
+           比重，分配盒子的“剩余”空间
+
+     管理盒子模型：
+     
+    box-pack:剩余空间排列——水平分布
+           start：所有子元素都显示在盒子的左侧，剩余空间显示在盒子的右侧
+           end：所有子元素都显示在盒子的右侧，剩余空间显示在盒子的左侧
+           justify：剩余空间在子元素之间平均分配，但第一个之前与最后一个
+                 元素之后不分配空间
+          center：剩余空间在盒子两侧平均分配
+          
+    box-align:剩余空间排列——垂直
+             start：所有子元素沿盒子的上边缘排列，剩余空间显示在盒子底部
+             end：所有子元素沿盒子的下边缘排列，剩余空间显示在盒子顶部
+            center：剩余空间在盒子的上下两侧均匀分配
+            strech：每个子元素的高度都被调整到适合盒子高度（拉伸）
+
+    box-lines:设置子元素是否可以换行显示
+        single：只在一行内显示
+        multiple:子元素超出父元素，换行显示
+    -->
+
+    <style>
+         .d0{
+             width: 600px;
+             height: 600px;
+             display: box;
+             border:1px solid #000000;;
+             /*webkit--chrome safari    moz--firefox   ms--微软ie  o--opera*/
+             display: -webkit-box;
+             display: -moz-box;
+             display: -ms-box;
+             box-orient:horizontal;
+
+             -webkit-box-orient: horizontal;
+             -moz-box-orient: horizontal;
+             -o-box-orient: horizontal;
+             -ms-box-orient: horizontal;
+             -webkit-box-align:stretch;
+
+
+             /*-webkit-box-direction:reverse;*/
+             /*-moz-box-direction:reverse;*/
+             /*-o-box-direction:reverse;*/
+             /*-ms-box-direction:reverse;*/
+
+         }
+         .d0_01{
+             display: box;
+             /*webkit--chrome safari    moz--firefox   ms--微软ie  o--opera*/
+             display: -webkit-box;
+             display: -moz-box;
+             display: -ms-box;
+             box-orient:horizontal;
+
+             -webkit-box-orient: horizontal;
+             -moz-box-orient: horizontal;
+             -o-box-orient: horizontal;
+             -ms-box-orient: horizontal;
+
+             -webkit-box-direction:reverse;
+             -moz-box-direction:reverse;
+             -o-box-direction:reverse;
+             -ms-box-direction:reverse;
+
+         }
+        .d1{
+            width: 250px;
+            height: 250px;
+            border: 1px solid #000000;
+            background: #ff0000;
+            /*box-ordinal-group:2 ;*/
+            /*-wibkit-box-ordinal-group:2 ;*/
+            /*box-flex:5 ;*/
+            /*-webkit-box-flex: 5;*/
+        }
+        .d2{
+            width: 250px;
+            height: 250px;
+            border: 1px solid #000000;
+            background: blue;
+            /*box-ordinal-group:3 ;*/
+            /*-wibkit-box-ordinal-group:3 ;*/
+            /*box-flex:2 ;*/
+            /*-webkit-box-flex: 2;*/
+        }
+        .d3{
+            width: 250px;
+            height: 250px;
+            border: 1px solid #000000;
+            background: #6cff8f;
+            /*box-ordinal-group:1 ;*/
+            /*-wibkit-box-ordinal-group:1 ;*/
+            /*box-flex:3;*/
+            /*-webkit-box-flex: 3;*/
+        }
+        .d4{
+            width: 200px;
+            height: 200px;
+            background: #ff0000;
+        }
+        .d5{
+            width: 100px;
+            height: 100px;
+            background: #85ff4c;
+        }
+        </style>
+
+</head>
+<body>
+<div class="d0">
+<div class="d1"></div>
+<div class="d2"></div>
+<div class="d3"></div>
+    </div>
+
+<!--</div>-->
+</body>
+</html>
