@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!--css3 变形 transform:
+       scale(x,y):缩放
+           arg1：水平方向缩放
+           arg2：垂直方向缩放
+           参数可以是正数、小数、负数
+           transform: scale(-1);旋转180度
+           transform: scale(-1，1);水平旋转
+           transform: scale(1，-1);垂直旋转
+           transform: scale(-1，-1);旋转180
+
+    skew：倾斜
+           arg1：水平方向倾斜
+           arg2：垂直方向倾斜
+           参数可以是正数、小数、负数
+            transform: skewX(30deg);
+            transform: skewY(30deg);
+
+    translate：移动
+           arg1：水平方向移动
+           arg2：垂直方向移动
+           参数可以是正数、小数、负数
+            transform: translateX(50px);
+            transform: translateY(50px);
+
+     rotate：旋转
+           arg1：水平方向旋转
+           arg2：垂直方向旋转
+           参数可以是正数、小数、负数
+            transform: rotateX(50deg);
+            transform: rotateY(50deg);
+
+      transform-origin(x,y):变形基准点，默认以“中兴”为基准:
+           参数：left top；（水平：left center right
+                              垂直：top center bottom）
+
+    20px 30px
+    1000%   30%
+    -->
+
+    <!--
+    css3 过渡
+         transition:transform                         6s          linear          3s;
+                   要过渡的属性（all-全部属性）       过渡时间    过渡方式        过渡延时（多少秒后发生过渡）
+                  过渡房叔：linear：线性过渡，从头到尾速度相同
+                            ease-in:由慢到快
+                            ease-out:由快到慢
+                            ease-in-out：由慢到快再道慢
+
+    -->
+    <style>
+        /*.d0{*/
+            /*width: 300px;*/
+            /*height: 300px;*/
+            /*background: #ff0000;*/
+            /*transform: scale(2);*/
+            /*transform: scale(0.5,2);*/
+            /*transform: scaleX(0.5);*/
+            /*transform: scaleY(0.5);*/
+            /*transform: scale(-1,2);*/
+            /*transform: scale(0.5,-1);*/
+            /*transform: scale(-1,-1);*/
+
+            /*transform: skew(30deg,40deg);*/
+            /*transform: skew(30deg);*/
+            /*transform: skew(-30deg);*/
+            /*transform: skewX(30deg);*/
+            /*transform: skewY(30deg);*/
+
+            /*transform: translate(50px,30px);*/
+            /*transform: translate(50px);*/
+            /*transform: translate(-50px);*/
+            /*transform: translateX(50px);*/
+            /*transform: translateY(50px);*/
+            /**/
+            /*transform: rotate(50d);*/
+            /*transform: rotate(-50deg);*/
+            /*transform: rotateX(50deg);*/
+            /*transform: rotateY(50deg);*/
+
+            /*transform-origin: right bottom;*/
+        /*}*/
+        .d0{
+            width: 300px;
+            height: 300px;
+            background-color: #ff0000;
+        }
+        .d0:hover{
+            background: #0084b6;
+            width: 500px;
+            /*transition: background 20s ease;*/
+            /*ease ease-in ease-out ease-in-out*/
+          /*transform: rotateY(360deg);*/
+            /*transition:transform 6s linear 3s;*/
+            transition: background 3s,width 3s linear;
+            /*transition: all 3s linear;*/
+        }
+
+        </style>
+</head>
+<body>
+<!--<img src="aa.jpg" class="d0">-->
+<div class="d0"></div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!--css3 渐变-->
+    <style>
+        .d0{
+            width: 300px;
+            height: 300px;
+            border: 1px solid red;
+
+            /*线性渐变 -webkit-
+            -webkit-gradient(linear,left top ,left bottom,from(red),to(blue),color-stop(0.3,gold),color-stop(0.8,#008000));
+                           线性渐变  起始点     终止点    起始颜色  终止颜色  中间过渡色
+            */
+            background: -webkit-gradient(linear,left top ,left bottom,
+            from(red),to(blue),color-stop(0.3,gold),color-stop(0.8,#008000));
+
+            /*线性渐变  Gecko -moz-*/
+            /*background: -moz-linear-gradient(red,blue);*/
+            /*径向渐变 webkit
+              background: -webkit-gradient(radial,    100 100, 10,       100 100, 50        ,from(red),to(blue), color-stop(0.3,gold),color-stop(0.8,#008000));
+                                          径向渐变   内圆坐标 内圆半径  外圆坐标  外圆坐标  起始颜色  终止颜色   中间过渡色
+            */
+            /*background: -webkit-gradient(radial,100 100,10,100 100,50,from(red),to(blue),color-stop(0.3,gold),color-stop(0.8,#008000));*/
+            /*径向渐变  Gecko*/
+            /*background: -moz-radial-gradient(red,yellow,blue);*/
+
+            font-size: 40px;
+            font-family: "微软雅黑", "黑体";
+            -webkit-background-clip:text ;
+            color: transparent;
+        }
+        </style>
+</head>
+<body>
+<div class="d0">放松放松</div>
+</body>
+</html>
