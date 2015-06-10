@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <!--针对移动设备设置-->
+    <!--网页宽度采用设备宽度，缩放比例为1，不允许用户缩放-->
+    <meta name="viewport" content="width=device-width,intial-scale=1.0,user-scalable=no">
+    <title></title>
+    <!--响应式设计
+       响应式设计(自适应设计):responseive web design,识别屏幕尺寸，做出页面的响应调整
+                max-width:最大宽度，即浏览器小于该参数时应采用的样式
+                min-width:最小宽度，即浏览器大于该参数时应采用的样式
+       引用方式：
+                1、<style>
+                ...
+                 @media screen and (max-width: 800px) and (min-width: 500px) { 800 > x >500
+                    .d0{
+                        background: blue;
+                    }
+                }
+                ...
+                   </style>
+                2、外部引用方式
+                   <link href="css/responsecss11.css" rel="stylesheet" media="screen and (max-width: 800px) and (min-width: 500px)">
+                3、import方式
+                 <style media="screen and (max-width: 800px) and (min-width: 500px)">
+                    @import "css/responsecss11.css";
+                </style>
+        媒体类型：
+                screen     用于计算机显示器
+                handhold   用于手持设备
+                tv         用于电视类设备
+                print      用于打印机
+                。。。
+                all        所有多媒体设备
+
+       注意：字体尽量采用em单位
+             图片尽量采用百分比：  width: 100%;
+                                  height: auto;
+                                  min-width: 300px;
+    -->
+    <style>
+        /*@import "css/responsecss11.css"  screen and (max-width: 800px) and (min-width: 500px);*/
+        /*body{*/
+        /*font-size: 16px;*/
+        /*}*/
+        /*.d0{*/
+        /*background: red;*/
+        /*border: 1px solid red;*/
+        /*width: 300px;*/
+        /*height: 300px;*/
+
+        /*}*/
+        /*img{*/
+        /*width: 100%;*/
+        /*height: auto;*/
+        /*min-width: 300px;*/
+
+        /*}*/
+        /*@media all and (max-width: 800px) and (min-width: 500px) {*/
+        /*.d0{*/
+        /*background: blue;*/
+        /*font-size: 3em;*/
+        /*}*/
+        /*}*/
+        /*@media screen and (min-width: 600px){*/
+        /*.d0{*/
+        /*background: gold;*/
+        /*}*/
+        /*}*/
+        /*css3 投影*/
+        img{
+            -webkit-box-reflect:below 5px -webkit-gradient(linear,left top,left bottom ,from(transparent),to(blue))
+        }
+
+    </style>
+    <!--<style media="screen and (max-width: 800px) and (min-width: 500px)">-->
+    <!--@import "css/responsecss11.css";-->
+    <!--</style>-->
+    <!--<link href="css/responsecss11.css" rel="stylesheet" media="screen and (max-width: 800px) and (min-width: 500px)">-->
+</head>
+<body>
+<img src="images/thm04.jpg">
+<div style="width: 200px;height: 200px;background: red"></div>
+<!--<div class="d0">-->
+<!--<img src="images/thm04.jpg">-->
+
+<!--</div>-->
+</body>
+</html>
